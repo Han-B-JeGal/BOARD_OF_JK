@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+  <p>
+  <div class="container">  <!-- container class 가 페이지의 컨텐츠영역을 지정 -->
+   <div class="jumbotron" style="width:400px; margin:auto">
+
+          <div class="boxbox" style='width:300px; margin:auto'>
+           <form accept-charset="UTF-8" role="form" method="post" action="/users/auth">
+            <h5>로그인</h5> 
+            <hr>
+            <div class="form-group">
+                <label for="username-email">아이디(이메일주소)</label>
+                <input name="uid" value='' id="username-email" placeholder="E-mail" type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="password">패스워드</label>
+                <input name="pass" id="password" value='' placeholder="Password" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block" value="로그인" />
+            </div>
+            <hr />
+            <div class="form-group">
+                <a href="/users/reg" class="btn btn-primary btn-block m-t-md"> 회원가입</a>
+            </div>
+            <span class='text-center'><a href="#" class="text-sm">비밀번호를 잊으셨나요?</a>
+            </span>
+           </form>
+          </div>
+
+     </div>  <!-- jumbotron -->
+    </div> <!-- /.container -->

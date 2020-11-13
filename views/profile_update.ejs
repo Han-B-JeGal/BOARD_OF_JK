@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+    <script language="javascript">
+
+      function validate() {
+        let pw1 = document.getElementById("pw1").value;
+        let pw2 = document.getElementById("pw2").value;
+        let uid = document.getElementById("uid").value;
+
+        if (pw1 != pw2) {
+          alert("암호가 서로 다릅니다. 다시입력하세요");
+          return false;
+        }
+        return true;
+      }
+
+    </script>
+
+    <p>
+    <div class="container">  <!-- container class 가 페이지의 컨텐츠영역을 지정 -->
+    <div class="jumbotron" style="width:500px; margin:auto">
+
+    <div class="bm-login-form" style='width:400px; margin-left:auto; margin-right:auto; border:1px'>
+
+      <div class="starter-template">
+        <h5> 회원정보 수정</h5> <hr>
+      </div>
+
+     <form name=profileUpdate onsubmit="return validate()" method=post action="update_profile">
+       <div class="form-group">
+         <label for="exampleInputEmail1">아이디(이메일)</label>
+         <input type="email" class="form-control" name="uid" id="u_uid" aria-describedby="emailHelp" value=<%= uid %> readonly>
+       </div>
+       <div class="form-group">
+         <label for="exampleInputPassword1">비밀번호</label>
+         <input type="password" class="form-control" name="pw1" id="u_pw1" value=<%= pass %>>
+       </div>
+       <div class="form-group">
+         <label for="exampleInputPassword2">비밀번호 확인</label>
+         <input type="password" class="form-control" name="pw2" id="u_pw2" value=<%= pass %>>
+       </div>
+       <div class="form-group">
+         <label for="exampleInputEmail1">이름</label>
+         <input type="text" class="form-control" name="uname" id="u_uname" value=<%= name %> readonly>
+       </div>
+       <div class="form-group">
+         <label for="exampleInputPhone">휴대폰 번호</label>
+         <input type="text" class="form-control" name="uphone" id="u_uphone" value=<%= phone %>>
+       </div>
+       <div class="form-group">
+         <label for="exampleInputAddress">주소</label>
+         <input type="text" class="form-control" name="uaddress" id="u_uaddress" value=<%= address %>>
+       </div>
+       <div class="form-group">
+         <label for="exampleInputBirth">생년월일</label>
+         <input type="text" class="form-control" name="ubirth" id="u_ubirth" value=<%= birth %>>
+       </div>
+       <div class="form-group">
+         <label for="exampleInputPoint">보유 포인트</label>
+         <input type="text" class="form-control" name="uPoint" id="u_uPoint" value=<%= point %> readonly>
+       </div>
+         <hr>
+         <div class="row">
+           <div class="col-6">
+             <button type="submit" class="btn btn-outline-primary btn-block">수정완료</button>
+           </div>
+           <div class="col-6">
+             <a class="btn btn-outline-secondary btn-block" role="button" href="/">돌아가기</a>
+           </div>
+         </div>
+      </form>
+     </div>
+     </div>
+    </div><!-- /.container -->
+
+ <!-- Footer 영역 -->
